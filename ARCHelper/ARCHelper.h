@@ -49,7 +49,12 @@ __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_5_0) || \
 (defined __MAC_OS_X_VERSION_MIN_REQUIRED && \
 __MAC_OS_X_VERSION_MIN_REQUIRED > __MAC_10_7))
 #define ah_weak weak
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
 #define __ah_weak __weak
+#pragma clang diagnostic pop
+
 #else
 #define ah_weak unsafe_unretained
 #define __ah_weak __unsafe_unretained

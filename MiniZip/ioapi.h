@@ -19,7 +19,11 @@
 */
 
 #ifndef _ZLIBIOAPI64_H
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wreserved-id-macro"
 #define _ZLIBIOAPI64_H
+#pragma clang diagnostic pop
 
 #if (!defined(_WIN32)) && (!defined(WIN32)) && (!defined(__APPLE__))
     /* Linux needs this to support file operation on files larger then 4+GB
