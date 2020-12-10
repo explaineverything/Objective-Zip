@@ -3,7 +3,8 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "objective-zip"
-  s.version      = "0.8.3-explain"
+  s.version      = "0.8.3-explain.2"
+
   s.summary      = "An object-oriented friendly wrapper library for ZLib and MiniZip, in Objective-C for iOS and OS X"
 
   s.homepage     = "https://github.com/flyingdolphinstudio/Objective-Zip"
@@ -34,20 +35,14 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files  = "Objective-Zip/**/*.{h,m}", "MiniZip/**/*.{h,c}", "ZLib/**/*.{h,c}"
-
-
-  # ――― Publich Headers ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
-  s.public_header_files = [ "Objective-Zip/*.{m,h}",
-                            "MiniZip/*.{h,c}",
-                            "ARCHelper/*.h", ]
-
-  s.libraries = 'z'
+  s.source_files  = [ "Objective-Zip/*.{m,h}",
+                      "MiniZip/*.{h,c}",
+                      "ARCHelper/*.h" ]
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
+  s.libraries = 'z'
   s.requires_arc = false
 
 end
